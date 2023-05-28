@@ -9,6 +9,7 @@
   "author": "Alena Khan",
   "license": "ISC",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.39.1",
     "cypress": "^12.6.0"
   }
 }
