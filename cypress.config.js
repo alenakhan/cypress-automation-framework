@@ -13,4 +13,7 @@ module.exports = defineConfig({
       return config;
     },
   },
+  env: {
+    loginPage: 'https://the-internet.herokuapp.com/login'
+  }
 });
