@@ -1,0 +1,37 @@
+name:  Run Cypress tests
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  cypress-run:
+    name: Run tests
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Cypress run
+      uses: cypress-io/github-action@v5
+
+    - name: Test Summary
+      uses: test-summary/action@v2
+      if: always()
+      with:
+        paths: reports/*.xml
+
+    - name: Publish test results
+      uses: EnricoMi/publish-unit-test-result-action@v2
+      if: always()
+      with:
+        files: reports/*.xml
+
+    - name: Artifacts
+      uses: actions/upload-artifact@v3
+      if: failure()
+      with:
+        name: cypress-screenshots
+        path: ./cypress/screenshots
+        
