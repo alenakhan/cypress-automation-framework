@@ -10,6 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.39.1",
-    "cypress": "^12.6.0"
+    "cypress": "^12.6.0",
+    "cypress-multi-reporters": "^1.6.3",
+    "mocha-junit-reporter": "^2.2.0"
   }
 }

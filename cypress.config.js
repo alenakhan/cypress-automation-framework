@@ -13,6 +13,10 @@ module.exports = defineConfig({
       return config;
     },
   },
+  reporter: 'junit',
+  reporterOptions: {
+    mochaFile: 'results/test-results-[hash].xml',
+  },
   env: {
     loginPage: 'https://the-internet.herokuapp.com/login'
   }
