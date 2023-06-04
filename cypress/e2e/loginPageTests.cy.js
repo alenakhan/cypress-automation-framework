@@ -4,21 +4,25 @@ import LoginPage from '../pageObjects/LoginPage';
 const loginPage = new LoginPage();
 
 describe('Login Page Tests', () => {
-  beforeEach(function () {
-    cy.fixture('loginPage').then((loginPage) => {
-      this.loginPageData = loginPage;
+  before(function () {
+    cy.fixture('loginPage').then((loginData) => {
+      globalThis.loginData = loginData;
     });
+
+    cy.fixture('secureAreaPage').then((data) => {
+        globalThis.data = data;
+      });
 
     loginPage.visitLoginPage();
   });
 
   it('Login with valid credentials', function () {
-    loginPage.getUsernameInput().type(this.loginPageData.validUsername);
-    loginPage.getPasswordInput().type(this.loginPageData.validPassword);
-    loginPage.getSubmitButton().click();
     loginPage
-      .getSuccessMessage()
+      .typeUsername(loginData.validUsername)
+      .typePassword(loginData.validPassword)
+      .clickSubmitButton()
+      .getSecureAreaPageSuccessMessage()
       .should('be.visible')
-      .and('contain', this.loginPageData.successMessage);
+      .and('contain', data.securePageSuccessMessage);    
   });
 });

@@ -1,5 +1,5 @@
 {
     "validUsername": "tomsmith",
-    "validPassword": "SuperSecretPassword!",
-    "successMessage": "You logged into a secure area!"
+    "validPassword": "SuperSecretPassword!"
+    
 }
