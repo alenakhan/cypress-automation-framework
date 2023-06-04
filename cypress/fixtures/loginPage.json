@@ -1,5 +1,5 @@
 {
     "validUsername": "tomsmith",
-    "validPassword": "SuperSecretPassword!"
-    
+    "validPassword": "SuperSecretPassword!",
+    "logoutSuccessMessage": "You logged out of the secure area!"
 }

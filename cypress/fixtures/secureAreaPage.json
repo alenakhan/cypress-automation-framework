@@ -1,3 +1,4 @@
 {
-    "securePageSuccessMessage": "You logged into a secure area!"
+    "securePageSuccessMessage": "You logged into a secure area!",
+    "secureAreaPageHeaderName": " Secure Area"
 }
