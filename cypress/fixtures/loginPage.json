@@ -1,5 +1,7 @@
 {
     "validUsername": "tomsmith",
     "validPassword": "SuperSecretPassword!",
-    "logoutSuccessMessage": "You logged out of the secure area!"
+    "logoutSuccessMessage": "You logged out of the secure area!",
+    "invalidUsernameMessage": "Your username is invalid!",
+    "invalidPasswordMessage": "Your password is invalid!"
 }

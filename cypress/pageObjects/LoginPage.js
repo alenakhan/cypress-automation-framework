@@ -7,8 +7,9 @@ class LoginPage {
 
     getUsernameInput = () => cy.get('#username');
     getPasswordInput = () => cy.get('#password');
-    getSubmitButton = () => cy.get('button[type="submit"]');
+    getLoginButton = () => cy.get('button[type="submit"]');
     getLoginPageSuccessMessage = () => cy.get('#flash[class="flash success"]');
+    getLoginPageErrorMessage = () => cy.get('#flash[class="flash error"]');
 
 
     typeUsername(username) {
@@ -21,8 +22,8 @@ class LoginPage {
         return this;
     };
 
-    clickSubmitButton() {
-        this.getSubmitButton().click();
+    clickLoginButton() {
+        this.getLoginButton().click();
         return new SecureAreaPage;
     };
 
