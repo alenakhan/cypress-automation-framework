@@ -60,4 +60,26 @@ describe('Gorest API testing', () => {
       });
     });
   });
+
+  describe('Delete user', () => {
+    it('Verify user can be deleted', () => {
+      cy.request({
+        method: 'DELETE',
+        url: `${API_BASE_URL}/users/${userId}?access-token=${accessToken}`,
+      })
+        .its('status')
+        .should('be.eq', 204);
+    });
+
+    it('Verify deleted user doesn`t exist', function () {
+      cy.request({
+        method: 'GET',
+        url: `${API_BASE_URL}/users/${userId}?access-token=${accessToken}`,
+        failOnStatusCode: false,
+      }).then((response) => {
+        expect(response.status).to.equal(404);
+        expect(response.body.message).to.equal(this.data.message404);
+      });
+    });
+  });
 });

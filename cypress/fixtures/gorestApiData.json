@@ -1,5 +1,6 @@
 {
     "accessToken": "bfed7a50f0c94c7e02fd7b1da4ed9e3bfcb3314bba5ce4d33a03153b773f80b5",
     "userStatus": ["active", "inactive"],
-    "responseBodyKeys": ["id", "name", "email", "gender", "status"]
+    "responseBodyKeys": ["id", "name", "email", "gender", "status"],
+    "message404": "Resource not found"
 }
