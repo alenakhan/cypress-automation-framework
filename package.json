@@ -9,6 +9,7 @@
   "author": "Alena Khan",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
     "@shelex/cypress-allure-plugin": "^2.39.1",
     "cypress": "^12.6.0",
     "cypress-multi-reporters": "^1.6.3",
