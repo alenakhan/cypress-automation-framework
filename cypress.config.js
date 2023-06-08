@@ -18,6 +18,7 @@ module.exports = defineConfig({
     mochaFile: 'results/test-results-[hash].xml',
   },
   env: {
-    loginPage: 'https://the-internet.herokuapp.com/login'
+    loginPage: 'https://the-internet.herokuapp.com/login',
+    apiBaseUrl: 'https://gorest.co.in/public/v2'
   }
 });
